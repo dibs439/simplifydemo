@@ -11,11 +11,16 @@ use Tests\TestCase;
 class PlayersTest extends TestCase
 {
     use DatabaseMigrations;
-    /**
-     * A basic feature test example.
-     *
-     * @return void
-     */
+
+    /** @test */
+    public function a_player_is_added_to_players_table()
+    {
+        $player = factory('App\Player')->create();
+        $this->assertDatabaseHas('players', [
+            'first_name' => $player->first_name
+        ]);
+    }
+
 
      /** @test */
     public function a_user_can_see_player()

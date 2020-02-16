@@ -81,7 +81,7 @@
                               <th>100s</th>
                               <th>Highest</th>
                               <th>Updated</th>
-                              <th>Action</th>
+
                             </tr>
                           </thead>
                           <tbody>
@@ -103,7 +103,6 @@
                               <td>{{ $player->num_hundreds }}</td>
                               <td>{{ $player->highest_score }}</td>
                               <td>@if(isset($team->updated_at)) {{ $team->updated_at->format('d/m/Y')   }}@endif</td>
-                              <td><a href="{{ url('/team/'.$team->id) }} ">View</a></td>
                             </tr>
                             @endforeach
                           </tbody>

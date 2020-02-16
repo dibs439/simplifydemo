@@ -11,20 +11,22 @@ use Tests\TestCase;
 class TeamsTest extends TestCase
 {
     use DatabaseMigrations;
-    /**
-     * A basic feature test example.
-     *
-     * @return void
-     */
+
+
+    /** @test */
+    public function a_team_is_added_to_teams_table()
+    {
+        $team = factory('App\Team')->create();
+        $this->assertDatabaseHas('teams', [
+            'name' => $team->name
+        ]);
+    }
 
     /** @test */
     public function a_user_can_see_teams()
     {
         $team = factory('App\Team')->create();
-        //$response = $this->get('/teams');
         $this->get('/teams')->assertSee($team->name);
-
-        //$response->assertStatus(200);
     }
 
     /** @test */

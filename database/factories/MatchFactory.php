@@ -3,6 +3,7 @@
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
 use App\Match;
+use App\Team;
 use Faker\Generator as Faker;
 
 $factory->define(Match::class, function (Faker $faker) {

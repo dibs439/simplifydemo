@@ -21,22 +21,14 @@ class MatchesController extends Controller
         if(!isset($id)) {
             return redirect()->intended('/matches')->with('error', 'No match found with this id');
         }
-        //$match = Match::with('team1.players', 'team2.players')->where('id', $id)->first();
-
-        //get the data you need
-        $data = ['match_id' = $id];
-
-        //pass the data to your wapper class
-        $composerWrapper = new TeamListComposer( $data );
-
-        //this will compose the view
-        $composerWrapper->compose();
+        $match = Match::with('team1.players', 'team2.players')->where('id', $id)->first();
 
 
-        // if(!isset($match)) {
-        //     return redirect()->intended('/matches')->with('error', 'No match found with this id');
-        // }
 
-        return view('matches.show');
+        if(!isset($match)) {
+            return redirect()->intended('/matches')->with('error', 'No match found with this id');
+        }
+
+        return view('matches.show', ['match' => $match]);
     }
 }

@@ -2,8 +2,13 @@
 
 @section('content')
 <div class="container">
+    <h1> {{ $match->team1->name ?? '' }} vs {{ $match->team2->name ?? '' }} </h1>
+    <div class="text-right"><a href="{{ route('matches.score', $match->id) }}">Enter Scores</a></div>
+
     <div class="row justify-content-center">
-        <h1> {{ $match->team1->name ?? '' }} vs {{ $match->team2->name ?? '' }} </h1>
+
+
+
 
         <div class="col-md-12">
             <div class="card">
@@ -20,7 +25,7 @@
                           <thead>
                             <tr>
                               <th>Id</th>
-                              <th>Logo</th>
+                              <th>Image</th>
                               <th>First Name</th>
                               <th>Last Name</th>
                               <th>Jersey No.</th>

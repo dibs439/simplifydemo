@@ -4,6 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
+            <div class="text-right"><a href="{{ route('matches.create') }}">Add new match</a></div>
             <div class="card">
                 <div class="card-header">List of Matches</div>
 
@@ -30,7 +31,24 @@
                           <td class="text-center">{{ $match->runs_team_1 ?? '' }}({{ $match->wickets_team_1 ?? '' }}) in {{ $match->overs_team_1 ?? '' }}</td>
                           <td class="text-center">{{ $match->runs_team_2 ?? '' }}({{ $match->wickets_team_2 ?? '' }}) in {{ $match->overs_team_2 ?? '' }}</td>
                           <td class="text-center"><img src="{{ asset(env('TEAM_PIC_URL').'/'.$match->team2->logo_uri) }}" alt="{{ $match->team2->name }}" style="width:75px;" /><br />{{ $match->team2->name }}</td>
-                          <td class="text-center"><a href="{{ url('/match/'.$match->id) }} ">View</a></td>
+                          <td class="text-center">
+
+                              <form class="row" method="POST" action="{{ route('matches.destroy', $match->id) }}" onsubmit = "return confirm('Are you sure to delete?')">
+                                <input type="hidden" name="_method" value="DELETE">
+                                @csrf
+                                <a href="{{ route('matches.edit', $match->id) }}" class="btn btn-warning col-xs-5">
+                                Update
+                                </a>&nbsp;
+                                <a href="{{ route('matches.score', $match->id) }}" class="btn btn-info col-xs-5">
+                                Scorecard
+                                </a>&nbsp;
+                                <button type="submit" class="btn btn-danger col-xs-5">
+                                Delete
+                                </button>
+                              </form>
+
+
+                          </td>
                         </tr>
                         @endforeach
                       </tbody>

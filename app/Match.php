@@ -7,12 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 class Match extends Model
 {
 
-    public function Team1() {
-    	return $this->belongsTo('App\Team', 'team_id_1', 'id');
+    protected $fillable = ['team_id_1', 'team_id_2', 'game_type', 'toss_winner', 'team_batting_fist'];
+
+    public function team1() {
+    	return $this->belongsTo('App\Team', 'team_id_1', 'id')->with('players');
     }
 
-    public function Team2() {
-    	return $this->belongsTo('App\Team', 'team_id_2', 'id');
+    public function team2() {
+    	return $this->belongsTo('App\Team', 'team_id_2', 'id')->with('players');
+    }
+
+    public function players() {
+    	return $this->hasMany('App\Player');
     }
 
 }

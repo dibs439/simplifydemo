@@ -5,7 +5,6 @@
     <div class="row justify-content-center">
         <h1> {{ $team->name }} </h1>
         <div class="col-md-12">
-            <div class="text-right"><a href="{{ route('players.create', ['team_id' => $team->id, 'team_name' => $team->name]) }}">Add new player</a></div>
             <div class="card">
                 <div class="card-header">Matches</div>
 
@@ -75,14 +74,13 @@
                               <th>Matches</th>
                               <th>Inings</th>
                               <th>Runs Scored</th>
-                              <!--<th>Balls Faced</th>
+                              <th>Balls Faced</th>
                               <th>4s</th>
                               <th>6s</th>
                               <th>50s</th>
-                              <th>100s</th>-->
+                              <th>100s</th>
                               <th>Highest</th>
-                              <!--<th>Updated</th>-->
-                              <th>Actions</th>
+                              <th>Updated</th>
 
                             </tr>
                           </thead>
@@ -92,33 +90,19 @@
                             <tr>
                               <td>{{ $player->id }}</td>
                               <td><img src="{{ asset(env('PLAYER_PIC_URL').strtolower($player->country_code).'/'.$player->image_uri) }}" alt="{{ $player->first_name.' '.$player->last_name }}" style="width:75px;" /></td>
-                              <td><a href="{{ route('players.show', $player->id) }}">{{ $player->first_name }}</a></td>
+                              <td>{{ $player->first_name }}</td>
                               <td>{{ $player->last_name }}</td>
                               <td>{{ $player->jersey_num }}</td>
                               <td>{{ $player->match_played }}</td>
                               <td>{{ $player->num_inings }}</td>
                               <td>{{ $player->tot_runs }}</td>
-                              <!--<td>{{ $player->tot_balls_faced }}</td>
+                              <td>{{ $player->tot_balls_faced }}</td>
                               <td>{{ $player->tot_fours }}</td>
                               <td>{{ $player->tot_sixes }}</td>
                               <td>{{ $player->num_fifties }}</td>
-                              <td>{{ $player->num_hundreds }}</td>-->
+                              <td>{{ $player->num_hundreds }}</td>
                               <td>{{ $player->highest_score }}</td>
-                              <!--<td>@if(isset($player->updated_at)) {{ $player->updated_at->format('d/m/Y')   }}@endif</td>-->
-                              <td>
-
-                                <form class="row" method="POST" action="{{ route('players.destroy', $player->id) }}" onsubmit = "return confirm('Are you sure to delete?')">
-                                    <input type="hidden" name="_method" value="DELETE">
-                                    @csrf
-                                    <a href="{{ route('players.edit', $player->id) }}" class="btn btn-warning col-xs-5">
-                                    Update
-                                    </a>&nbsp;
-                                    <button type="submit" class="btn btn-danger col-xs-5">
-                                    Delete
-                                    </button>
-                                </form>
-
-                              </td>
+                              <td>@if(isset($team->updated_at)) {{ $team->updated_at->format('d/m/Y')   }}@endif</td>
                             </tr>
                             @endforeach
                           </tbody>

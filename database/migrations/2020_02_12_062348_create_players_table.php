@@ -20,7 +20,7 @@ class CreatePlayersTable extends Migration
             $table->string('last_name', 50);
             $table->string('image_uri');
             $table->integer('jersey_num');
-            $table->string('country_code', 2);
+            $table->string('country_code', 2)->nullable();
             $table->integer('match_played')->unsigned()->default(0);
             $table->integer('num_inings')->unsigned()->default(0);
             $table->integer('tot_runs')->unsigned()->default(0);

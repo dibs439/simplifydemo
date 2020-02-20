@@ -8,6 +8,6 @@ class TeamListComposer
 
     public function compose($view)
     {
-        $view->with('teams', Team::all());
+        $view->with('teams', Team::paginate(5));
     }
 }

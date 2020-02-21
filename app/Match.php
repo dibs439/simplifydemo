@@ -21,4 +21,7 @@ class Match extends Model
     	return $this->hasMany('App\Player');
     }
 
+    public function playerScores() {
+    	return $this->hasMany('App\PlayerScorecard', 'match_id', 'id')->with('player');
+    }
 }

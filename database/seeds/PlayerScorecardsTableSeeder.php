@@ -12,12 +12,12 @@ class PlayerScorecardsTableSeeder extends Seeder
      */
     public function run()
     {
-        
+
 
         \DB::table('player_scorecards')->delete();
-        
+
         \DB::table('player_scorecards')->insert(array (
-            0 => 
+            0 =>
             array (
                 'id' => 1,
                 'match_id' => 1,
@@ -31,7 +31,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            1 => 
+            1 =>
             array (
                 'id' => 2,
                 'match_id' => 1,
@@ -45,7 +45,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            2 => 
+            2 =>
             array (
                 'id' => 3,
                 'match_id' => 1,
@@ -59,7 +59,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            3 => 
+            3 =>
             array (
                 'id' => 4,
                 'match_id' => 1,
@@ -73,7 +73,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            4 => 
+            4 =>
             array (
                 'id' => 5,
                 'match_id' => 1,
@@ -87,7 +87,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            5 => 
+            5 =>
             array (
                 'id' => 6,
                 'match_id' => 1,
@@ -101,7 +101,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            6 => 
+            6 =>
             array (
                 'id' => 7,
                 'match_id' => 1,
@@ -115,7 +115,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            7 => 
+            7 =>
             array (
                 'id' => 8,
                 'match_id' => 1,
@@ -129,7 +129,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            8 => 
+            8 =>
             array (
                 'id' => 10,
                 'match_id' => 1,
@@ -143,7 +143,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            9 => 
+            9 =>
             array (
                 'id' => 11,
                 'match_id' => 1,
@@ -157,7 +157,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            10 => 
+            10 =>
             array (
                 'id' => 12,
                 'match_id' => 1,
@@ -171,7 +171,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            11 => 
+            11 =>
             array (
                 'id' => 13,
                 'match_id' => 1,
@@ -185,7 +185,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            12 => 
+            12 =>
             array (
                 'id' => 14,
                 'match_id' => 1,
@@ -199,7 +199,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            13 => 
+            13 =>
             array (
                 'id' => 15,
                 'match_id' => 1,
@@ -213,7 +213,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            14 => 
+            14 =>
             array (
                 'id' => 16,
                 'match_id' => 1,
@@ -227,7 +227,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            15 => 
+            15 =>
             array (
                 'id' => 17,
                 'match_id' => 1,
@@ -241,7 +241,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            16 => 
+            16 =>
             array (
                 'id' => 18,
                 'match_id' => 1,
@@ -255,7 +255,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            17 => 
+            17 =>
             array (
                 'id' => 19,
                 'match_id' => 1,
@@ -269,7 +269,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            18 => 
+            18 =>
             array (
                 'id' => 20,
                 'match_id' => 1,
@@ -283,7 +283,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            19 => 
+            19 =>
             array (
                 'id' => 21,
                 'match_id' => 1,
@@ -297,7 +297,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            20 => 
+            20 =>
             array (
                 'id' => 22,
                 'match_id' => 1,
@@ -311,12 +311,12 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            21 => 
+            21 =>
             array (
                 'id' => 23,
                 'match_id' => 2,
                 'player_id' => 2,
-                'runs' => 565,
+                'runs' => 56,
                 'balls' => 84,
                 'fours' => 5,
                 'sixes' => 0,
@@ -325,7 +325,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            22 => 
+            22 =>
             array (
                 'id' => 24,
                 'match_id' => 2,
@@ -339,7 +339,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            23 => 
+            23 =>
             array (
                 'id' => 25,
                 'match_id' => 2,
@@ -353,7 +353,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            24 => 
+            24 =>
             array (
                 'id' => 26,
                 'match_id' => 2,
@@ -367,7 +367,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            25 => 
+            25 =>
             array (
                 'id' => 27,
                 'match_id' => 2,
@@ -381,7 +381,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            26 => 
+            26 =>
             array (
                 'id' => 28,
                 'match_id' => 2,
@@ -395,7 +395,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            27 => 
+            27 =>
             array (
                 'id' => 29,
                 'match_id' => 2,
@@ -409,7 +409,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            28 => 
+            28 =>
             array (
                 'id' => 30,
                 'match_id' => 2,
@@ -423,7 +423,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            29 => 
+            29 =>
             array (
                 'id' => 31,
                 'match_id' => 2,
@@ -437,7 +437,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            30 => 
+            30 =>
             array (
                 'id' => 32,
                 'match_id' => 2,
@@ -451,7 +451,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            31 => 
+            31 =>
             array (
                 'id' => 33,
                 'match_id' => 2,
@@ -465,7 +465,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            32 => 
+            32 =>
             array (
                 'id' => 34,
                 'match_id' => 2,
@@ -479,7 +479,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            33 => 
+            33 =>
             array (
                 'id' => 35,
                 'match_id' => 2,
@@ -493,7 +493,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            34 => 
+            34 =>
             array (
                 'id' => 36,
                 'match_id' => 2,
@@ -507,7 +507,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            35 => 
+            35 =>
             array (
                 'id' => 37,
                 'match_id' => 2,
@@ -521,7 +521,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            36 => 
+            36 =>
             array (
                 'id' => 38,
                 'match_id' => 2,
@@ -535,7 +535,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            37 => 
+            37 =>
             array (
                 'id' => 39,
                 'match_id' => 2,
@@ -549,7 +549,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            38 => 
+            38 =>
             array (
                 'id' => 40,
                 'match_id' => 3,
@@ -563,7 +563,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            39 => 
+            39 =>
             array (
                 'id' => 41,
                 'match_id' => 3,
@@ -577,7 +577,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            40 => 
+            40 =>
             array (
                 'id' => 42,
                 'match_id' => 3,
@@ -591,7 +591,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            41 => 
+            41 =>
             array (
                 'id' => 43,
                 'match_id' => 3,
@@ -605,7 +605,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            42 => 
+            42 =>
             array (
                 'id' => 44,
                 'match_id' => 3,
@@ -619,7 +619,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            43 => 
+            43 =>
             array (
                 'id' => 45,
                 'match_id' => 3,
@@ -633,7 +633,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            44 => 
+            44 =>
             array (
                 'id' => 46,
                 'match_id' => 3,
@@ -647,7 +647,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            45 => 
+            45 =>
             array (
                 'id' => 47,
                 'match_id' => 3,
@@ -661,7 +661,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            46 => 
+            46 =>
             array (
                 'id' => 48,
                 'match_id' => 3,
@@ -675,7 +675,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            47 => 
+            47 =>
             array (
                 'id' => 49,
                 'match_id' => 3,
@@ -689,7 +689,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            48 => 
+            48 =>
             array (
                 'id' => 50,
                 'match_id' => 3,
@@ -703,7 +703,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            49 => 
+            49 =>
             array (
                 'id' => 51,
                 'match_id' => 3,
@@ -717,7 +717,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            50 => 
+            50 =>
             array (
                 'id' => 52,
                 'match_id' => 3,
@@ -731,7 +731,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            51 => 
+            51 =>
             array (
                 'id' => 53,
                 'match_id' => 3,
@@ -745,7 +745,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            52 => 
+            52 =>
             array (
                 'id' => 54,
                 'match_id' => 3,
@@ -759,7 +759,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            53 => 
+            53 =>
             array (
                 'id' => 55,
                 'match_id' => 3,
@@ -773,7 +773,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            54 => 
+            54 =>
             array (
                 'id' => 56,
                 'match_id' => 3,
@@ -787,7 +787,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            55 => 
+            55 =>
             array (
                 'id' => 57,
                 'match_id' => 4,
@@ -801,7 +801,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            56 => 
+            56 =>
             array (
                 'id' => 58,
                 'match_id' => 4,
@@ -815,7 +815,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            57 => 
+            57 =>
             array (
                 'id' => 59,
                 'match_id' => 4,
@@ -829,7 +829,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            58 => 
+            58 =>
             array (
                 'id' => 60,
                 'match_id' => 4,
@@ -843,7 +843,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            59 => 
+            59 =>
             array (
                 'id' => 61,
                 'match_id' => 4,
@@ -857,7 +857,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            60 => 
+            60 =>
             array (
                 'id' => 62,
                 'match_id' => 4,
@@ -871,7 +871,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            61 => 
+            61 =>
             array (
                 'id' => 63,
                 'match_id' => 4,
@@ -885,7 +885,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            62 => 
+            62 =>
             array (
                 'id' => 64,
                 'match_id' => 4,
@@ -899,7 +899,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            63 => 
+            63 =>
             array (
                 'id' => 65,
                 'match_id' => 4,
@@ -913,7 +913,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            64 => 
+            64 =>
             array (
                 'id' => 66,
                 'match_id' => 4,
@@ -927,7 +927,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            65 => 
+            65 =>
             array (
                 'id' => 67,
                 'match_id' => 4,
@@ -941,7 +941,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            66 => 
+            66 =>
             array (
                 'id' => 68,
                 'match_id' => 4,
@@ -955,7 +955,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            67 => 
+            67 =>
             array (
                 'id' => 69,
                 'match_id' => 4,
@@ -969,7 +969,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            68 => 
+            68 =>
             array (
                 'id' => 70,
                 'match_id' => 4,
@@ -983,7 +983,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            69 => 
+            69 =>
             array (
                 'id' => 71,
                 'match_id' => 4,
@@ -997,7 +997,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            70 => 
+            70 =>
             array (
                 'id' => 72,
                 'match_id' => 4,
@@ -1011,7 +1011,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            71 => 
+            71 =>
             array (
                 'id' => 73,
                 'match_id' => 5,
@@ -1025,7 +1025,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            72 => 
+            72 =>
             array (
                 'id' => 74,
                 'match_id' => 5,
@@ -1039,7 +1039,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            73 => 
+            73 =>
             array (
                 'id' => 75,
                 'match_id' => 5,
@@ -1053,7 +1053,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            74 => 
+            74 =>
             array (
                 'id' => 76,
                 'match_id' => 5,
@@ -1067,7 +1067,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            75 => 
+            75 =>
             array (
                 'id' => 77,
                 'match_id' => 5,
@@ -1081,7 +1081,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            76 => 
+            76 =>
             array (
                 'id' => 78,
                 'match_id' => 5,
@@ -1095,7 +1095,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            77 => 
+            77 =>
             array (
                 'id' => 79,
                 'match_id' => 5,
@@ -1109,7 +1109,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            78 => 
+            78 =>
             array (
                 'id' => 80,
                 'match_id' => 5,
@@ -1123,7 +1123,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            79 => 
+            79 =>
             array (
                 'id' => 81,
                 'match_id' => 5,
@@ -1137,7 +1137,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            80 => 
+            80 =>
             array (
                 'id' => 82,
                 'match_id' => 5,
@@ -1151,7 +1151,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            81 => 
+            81 =>
             array (
                 'id' => 83,
                 'match_id' => 5,
@@ -1165,7 +1165,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            82 => 
+            82 =>
             array (
                 'id' => 84,
                 'match_id' => 5,
@@ -1179,7 +1179,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            83 => 
+            83 =>
             array (
                 'id' => 85,
                 'match_id' => 5,
@@ -1193,7 +1193,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            84 => 
+            84 =>
             array (
                 'id' => 86,
                 'match_id' => 5,
@@ -1207,7 +1207,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            85 => 
+            85 =>
             array (
                 'id' => 87,
                 'match_id' => 5,
@@ -1221,7 +1221,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            86 => 
+            86 =>
             array (
                 'id' => 88,
                 'match_id' => 6,
@@ -1235,7 +1235,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            87 => 
+            87 =>
             array (
                 'id' => 89,
                 'match_id' => 6,
@@ -1249,7 +1249,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            88 => 
+            88 =>
             array (
                 'id' => 90,
                 'match_id' => 6,
@@ -1263,7 +1263,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            89 => 
+            89 =>
             array (
                 'id' => 91,
                 'match_id' => 6,
@@ -1277,7 +1277,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            90 => 
+            90 =>
             array (
                 'id' => 93,
                 'match_id' => 6,
@@ -1291,7 +1291,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            91 => 
+            91 =>
             array (
                 'id' => 94,
                 'match_id' => 6,
@@ -1305,7 +1305,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            92 => 
+            92 =>
             array (
                 'id' => 95,
                 'match_id' => 6,
@@ -1320,7 +1320,7 @@ class PlayerScorecardsTableSeeder extends Seeder
                 'updated_at' => NULL,
             ),
         ));
-        
-        
+
+
     }
 }

@@ -7,20 +7,20 @@
 
     <div class="row justify-content-center">
 
-
-
+        <h5>Scorecard of this match</h5>
+        @if(isset($match->playerScores) && $match->playerScores->count() > 0)
+        @php($playerScores = $match->playerScores)
 
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header"></div>
+                <div class="card-header font-weight-bold"><a href="{{ route('teams.show', $match->team1->id) }}">{{ $match->team1->name ?? '' }}</a></div>
 
                 <div class="card-body">
                     <h2>{{ $match->team1->name ?? '' }}</h2>
                     {{ $match->runs_team_1 ?? '' }}/{{ $match->wickets_team_1 ?? '' }} ({{ $match->overs_team_1 ?? '' }})
 
                     <div class="card-body table-responsive p-0">
-                        @if(isset($match->team1->players) && $match->team1->players->count() > 0)
-                        @php($players = $match->team1->players)
+
                         <table class="table table-hover">
                           <thead>
                             <tr>
@@ -29,42 +29,31 @@
                               <th>First Name</th>
                               <th>Last Name</th>
                               <th>Jersey No.</th>
-                              <th>Matches</th>
-                              <th>Inings</th>
-                              <th>Runs Scored</th>
-                              <th>Balls Faced</th>
+                              <th>Runs</th>
+                              <th>Balls</th>
                               <th>4s</th>
                               <th>6s</th>
-                              <th>50s</th>
-                              <th>100s</th>
-                              <th>Highest</th>
                             </tr>
                           </thead>
                           <tbody>
-                            @foreach($players as $player)
-
+                            @foreach($playerScores as $playerScore)
+                            @if($playerScore->player->team_id == $match->team_id_1)
                             <tr>
-                              <td>{{ $player->id }}</td>
-                              <td><img src="{{ asset(env('PLAYER_PIC_URL').strtolower($player->country_code).'/'.$player->image_uri) }}" alt="{{ $player->first_name.' '.$player->last_name }}" style="width:75px;" /></td>
-                              <td>{{ $player->first_name }}</td>
-                              <td>{{ $player->last_name }}</td>
-                              <td>{{ $player->jersey_num }}</td>
-                              <td>{{ $player->match_played }}</td>
-                              <td>{{ $player->num_inings }}</td>
-                              <td>{{ $player->tot_runs }}</td>
-                              <td>{{ $player->tot_balls_faced }}</td>
-                              <td>{{ $player->tot_fours }}</td>
-                              <td>{{ $player->tot_sixes }}</td>
-                              <td>{{ $player->num_fifties }}</td>
-                              <td>{{ $player->num_hundreds }}</td>
-                              <td>{{ $player->highest_score }}</td>
-
+                              <td>{{ $playerScore->player->id }}</td>
+                              <td><img src="{{ asset(env('PLAYER_PIC_URL').strtolower($playerScore->player->country_code).'/'.$playerScore->player->image_uri) }}" alt="{{ $playerScore->player->first_name.' '.$playerScore->player->last_name }}" style="width:75px;" /></td>
+                              <td>{{ $playerScore->player->first_name }}</td>
+                              <td>{{ $playerScore->player->last_name }}</td>
+                              <td class="text-center">{{ $playerScore->player->jersey_num }}</td>
+                              <td class="text-success text-cente font-weight-bold">{{ $playerScore->runs }}</td>
+                              <td class="text-danger text-cente font-weight-bold">{{ $playerScore->balls }}</td>
+                              <td class="text-center">{{ $playerScore->fours }}</td>
+                              <td class="text-center">{{ $playerScore->sixes }}</td>
                             </tr>
+                            @endif
                             @endforeach
                           </tbody>
 
                         </table>
-                        @endif
                     </div>
                 </div>
             </div>
@@ -72,15 +61,15 @@
 
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header"></div>
+                <div class="card-header font-weight-bold"><a href="{{ route('teams.show', $match->team2->id) }}">{{ $match->team2->name ?? '' }}</a></div>
+
 
                 <div class="card-body">
                     <h2>{{ $match->team2->name ?? '' }}</h2>
                     {{ $match->runs_team_2 ?? '' }}/{{ $match->wickets_team_2 ?? '' }} ({{ $match->overs_team_2 ?? '' }})
 
                     <div class="card-body table-responsive p-0">
-                        @if(isset($match->team2->players) && $match->team2->players->count() > 0)
-                        @php($players = $match->team2->players)
+
                         <table class="table table-hover">
                           <thead>
                             <tr>
@@ -89,46 +78,37 @@
                               <th>First Name</th>
                               <th>Last Name</th>
                               <th>Jersey No.</th>
-                              <th>Matches</th>
-                              <th>Inings</th>
-                              <th>Runs Scored</th>
-                              <th>Balls Faced</th>
+                              <th>Runs</th>
+                              <th>Balls</th>
                               <th>4s</th>
                               <th>6s</th>
-                              <th>50s</th>
-                              <th>100s</th>
-                              <th>Highest</th>
                             </tr>
                           </thead>
                           <tbody>
-                            @foreach($players as $player)
-
+                            @foreach($playerScores as $playerScore)
+                            @if($playerScore->player->team_id == $match->team_id_2)
                             <tr>
-                              <td>{{ $player->id }}</td>
-                              <td><img src="{{ asset(env('PLAYER_PIC_URL').strtolower($player->country_code).'/'.$player->image_uri) }}" alt="{{ $player->first_name.' '.$player->last_name }}" style="width:75px;" /></td>
-                              <td>{{ $player->first_name }}</td>
-                              <td>{{ $player->last_name }}</td>
-                              <td>{{ $player->jersey_num }}</td>
-                              <td>{{ $player->match_played }}</td>
-                              <td>{{ $player->num_inings }}</td>
-                              <td>{{ $player->tot_runs }}</td>
-                              <td>{{ $player->tot_balls_faced }}</td>
-                              <td>{{ $player->tot_fours }}</td>
-                              <td>{{ $player->tot_sixes }}</td>
-                              <td>{{ $player->num_fifties }}</td>
-                              <td>{{ $player->num_hundreds }}</td>
-                              <td>{{ $player->highest_score }}</td>
+                              <td>{{ $playerScore->player->id }}</td>
+                              <td class="text-center"><img src="{{ asset(env('PLAYER_PIC_URL').strtolower($playerScore->player->country_code).'/'.$playerScore->player->image_uri) }}" alt="{{ $playerScore->player->first_name.' '.$playerScore->player->last_name }}" style="width:75px;" /></td>
+                              <td>{{ $playerScore->player->first_name }}</td>
+                              <td>{{ $playerScore->player->last_name }}</td>
+                              <td class="text-center">{{ $playerScore->player->jersey_num }}</td>
+                              <td class="text-center text-success font-weight-bold">{{ $playerScore->runs }}</td>
+                              <td class="text-center text-danger font-weight-bold">{{ $playerScore->balls }}</td>
+                              <td class="text-center">{{ $playerScore->fours }}</td>
+                              <td class="text-center">{{ $playerScore->sixes }}</td>
                             </tr>
+                            @endif
+
                             @endforeach
                           </tbody>
 
                         </table>
-                        @endif
                     </div>
                 </div>
             </div>
         </div>
-
+        @endif
     </div>
 </div>
 @endsection

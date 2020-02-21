@@ -12,7 +12,7 @@ class MatchesController extends Controller
     // Lists all teams available in the system
     public function index()
     {
-        $matches = Match::orderBy('id', 'desc')->with('team1', 'team2')->get();
+        $matches = Match::orderBy('id', 'desc')->with('team1', 'team2')->paginate(7);
         return view('matches.index', ['matches' => $matches]);
     }
 
@@ -22,9 +22,8 @@ class MatchesController extends Controller
         if(!isset($id)) {
             return redirect()->intended('/matches')->with('error', 'No match found with this id');
         }
-        $match = Match::with('team1.players', 'team2.players')->where('id', $id)->first();
-
-
+        $match = Match::with('team1.players', 'team2.players', 'playerScores')->where('id', $id)->first();
+        //dd($match->playerScores[0]->player->first_name);
 
         if(!isset($match)) {
             return redirect()->intended('/matches')->with('error', 'No match found with this id');
@@ -63,21 +62,46 @@ class MatchesController extends Controller
         ];
 
 
-        Match::create($input);
-
-        return redirect()->intended('/teams')->with('success', __('Match added successfully'));
+        $match = Match::create($input);
+        if(isset($match->id))
+            return redirect()->intended(route('matches.score', $match->id))->with('success', __('Match added successfully'));
 
     }
 
     // Updates a new record
-    public function edit()
+    public function edit($id)
     {
+        $teams = Team::get()->pluck('id','name');
+        $match = Match::findOrFail($id);
+        return view('matches.edit', ['teams' => $teams, 'match' => $match]);
 
     }
 
     // Saves a current record in DB
-    public function update(Request $request)
+    public function update(Request $request, $id)
     {
+        $rules = [
+            'team_id_1'      => 'required|numeric',
+            'team_id_2'      => 'required|numeric',
+            //'game_type'      => 'required|numeric',
+            'toss_winner'      => 'required|numeric',
+            'team_batting_fist'      => 'required|numeric',
+        ];
+
+        $this->validate($request, $rules);
+
+
+        $input = [
+            'team_id_1' => $request['team_id_1'],
+            'team_id_2' => $request['team_id_2'],
+            'game_type' => '2',
+            'toss_winner' => $request['toss_winner'],
+            'team_batting_fist' => $request['team_batting_fist'],
+        ];
+
+
+        Match::find($id)->update($input);
+        return redirect()->intended(route('matches'))->with('success', __('Match updated successfully'));
 
     }
 
@@ -174,14 +198,6 @@ class MatchesController extends Controller
 
             for($i = 0; $i < $cnt; $i++) {
                 if(isset($request->runs2[$i]) && $wkts2 <= 11) {
-                    // $input[]['match_id'] = $id;
-                    // $input[]['player_id'] = $request->player_id2[$i];
-                    // $input[]['runs'] = $request->runs2[$i];
-                    // $input[]['balls'] = $request->balls2[$i];
-                    // $input[]['fours'] = $request->fours2[$i];
-                    // $input[]['sixes'] = $request->sixes2[$i];
-                    // $input[]['dots'] = 0;
-                    // $input[]['is_not_out'] = 0;
                     if(isset($request->player_id2[$i]) && isset($request->runs2[$i]) && isset($request->balls2[$i]) && isset($request->fours2[$i]) && isset($request->sixes2[$i]))
                     {
 
@@ -251,6 +267,10 @@ class MatchesController extends Controller
     // Deletes a record in DB
     public function destroy($id)
     {
+
+        Match::destroy($id);
+        // redirect
+        return redirect()->intended('/matches')->with('success', __('Match deleted successfully'));
 
     }
 }

@@ -7,7 +7,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">Add Match</div>
+                <div class="card-header">Update Match</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -19,8 +19,10 @@
 
                     @include('flash-message')
 
-                    <form class="form-horizontal" enctype="multipart/form-data" role="form" method="POST" action="{{ route('matches.store') }}">
+                    <form class="form-horizontal" enctype="multipart/form-data" role="form" method="POST" action="{{ route('matches.update', $match->id) }}">
+
                         @csrf
+                        <input type="hidden" name="_method" value="PATCH">
 
 						<div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                             <label for="team_id_1" class="col-md-4 control-label">Team 1</label>
@@ -31,8 +33,7 @@
                                     <option value="">Select</option>
                                     @if(isset($teams) && $teams->count() > 0)
                                     @foreach($teams as $key => $value)
-
-                                        <option value="{{ $value }}"{{ old('team_id_1') == $value ? " selected=selected" : "" }}>{{ $key }}</option>
+                                        <option value="{{ $value }}"{{ $match->team_id_1 == $value ? " selected=selected" : "" }}>{{ $key }}</option>
                                     @endforeach
                                     @endif
                                 </select>
@@ -48,11 +49,11 @@
                             <label for="team_id_2" class="col-md-4 control-label">Team 2</label>
 
                             <div class="col-md-6">
-                                <select id="team_id_2" class="form-control" name="team_id_2">
+                                <select id="team_id_2" class="form-control" name="team_id_2" }}>
                                     <option value="">Select</option>
                                     @if(isset($teams) && $teams->count() > 0)
                                     @foreach($teams as $key => $value)
-                                        <option value="{{ $value }}"{{ old('team_id_2') == $value ? " selected=selected" : "" }}>{{ $key }}</option>
+                                        <option value="{{ $value }}"{{ $match->team_id_2 == $value ? " selected=selected" : "" }}>{{ $key }}</option>
                                     @endforeach
                                     @endif
                                 </select>
@@ -70,8 +71,13 @@
                             <div class="col-md-6">
                                 <select id="toss_winner" class="form-control" name="toss_winner">
                                     <option value="">Select</option>
-                                    <option value="1">Team 1</option>
-                                    <option value="2">Team 2</option>
+                                    @if($match->toss_winner == "1")
+                                        <option value="1" selected="selected">Team 1</option>
+                                        <option value="2">Team 2</option>
+                                    @else
+                                        <option value="1">Team 1</option>
+                                        <option value="2" selected="selected">Team 2</option>
+                                    @endif
                                 </select>
 
 								@if ($errors->has('toss_winner'))
@@ -88,9 +94,16 @@
 
                             <div class="col-md-6">
                                 <select id="team_batting_fist" class="form-control" name="team_batting_fist">
+
                                     <option value="">Select</option>
-                                    <option value="1">Team 1</option>
-                                    <option value="2">Team 2</option>
+                                    @if($match->team_batting_fist == "1")
+                                        <option value="1" selected="selected">Team 1</option>
+                                        <option value="2">Team 2</option>
+                                    @else
+                                        <option value="1">Team 1</option>
+                                        <option value="2" selected="selected">Team 2</option>
+                                    @endif
+
                                 </select>
 
 								@if ($errors->has('team_batting_fist'))
